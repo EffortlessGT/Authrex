@@ -421,6 +421,10 @@ body {
   text-align: left;
   padding: 15px 10px 15px 10px;
   border-radius: 8px;
+  border: 1px solid var(--payne-grey-color);
+}
+.security-feature-card:hover {
+  border: 1px solid var(--finishing-color);
 }
 .security-feature-card i {
   color: var(--finishing-color);
@@ -431,6 +435,14 @@ body {
 }
 .security-feature-card h3 {
   padding-top: 15px;
+}
+.get-started-container {
+  text-align: center;
+  color: var(--primary-color);
+  padding: 5% 0px 3% 0px;
+}
+.get-started-container h2 {
+  padding-top: 20px;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -469,4 +481,15 @@ body {
   .documentation-container {
     width: 100%;  
 }
+.security-features-container h2 {
+  padding: 0px 10px 0px 10px;
+}
+.security-features-card-container {
+  flex-direction: column;
+}
+.security-feature-card {
+  width: 90%;
+  margin: auto;
+}
+
 }
