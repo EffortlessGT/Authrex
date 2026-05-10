@@ -1,6 +1,8 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import Founder from "../assets/img/Founder.jpeg";
 import "./about.css";
 
 export const metadata: Metadata = {
@@ -55,41 +57,17 @@ export default function AboutPage() {
         </section>
 
         <section className="about-team-section">
-          <h2>Built by Engineers</h2>
+          <h2>Built by Engineer</h2>
           <p>AUTHREX is designed and maintained by engineers focused on secure systems and backend infrastructure.</p>
-          
+
           <div className="team-grid">
             <div className="team-card">
               <div className="team-avatar">
-                <i className="fa-solid fa-user-astronaut"></i>
+                <Image src={Founder} height={50} width={50} alt="Profile" />
               </div>
-              <h3>Alex Chen</h3>
-              <div className="team-role">Founder & Backend Engineer</div>
-              <p>Specializes in secure backend systems, identity architecture, and highly concurrent distributed databases.</p>
-            </div>
-            <div className="team-card">
-              <div className="team-avatar">
-                <i className="fa-solid fa-user-shield"></i>
-              </div>
-              <h3>Sarah Mitchell</h3>
-              <div className="team-role">Security Engineer</div>
-              <p>Expert in applied cryptography, threat modeling, and building resilient access control systems.</p>
-            </div>
-            <div className="team-card">
-              <div className="team-avatar">
-                <i className="fa-solid fa-network-wired"></i>
-              </div>
-              <h3>Marcus Rodriguez</h3>
-              <div className="team-role">Infrastructure Engineer</div>
-              <p>Focuses on distributed systems, global scalability, and site reliability engineering for mission-critical services.</p>
-            </div>
-            <div className="team-card">
-              <div className="team-avatar">
-                <i className="fa-solid fa-laptop-code"></i>
-              </div>
-              <h3>Emily Zhang</h3>
-              <div className="team-role">API & SDK Engineer</div>
-              <p>Passionate about developer experience, elegant API design, and building robust cross-platform SDKs.</p>
+              <h3>Ganesh Telore</h3>
+              <div className="team-role">Founder & Full System Engineer</div>
+              <p>Backend Engineer, Specializing in secure backend systems, identity architecture, and highly concurrent distributed systems.</p>
             </div>
           </div>
         </section>

@@ -59,13 +59,13 @@ const Navbar = () => {
               </Link>
             </li>
             <div className="mobile-action-containers">
-              <button className="login-button">Sign In</button>
-              <button className="get-started-button">Get Started</button>
+              <Link href="/sign-in"><button className="login-button">Sign In</button></Link>
+              <Link href="/sign-up"><button className="get-started-button">Get Started</button></Link>
             </div>
           </ul>
           <div className="action-containers desktop-actions">
-            <button className="login-button">Sign In</button>
-            <button className="get-started-button">Get Started</button>
+            <Link href="/sign-in"><button className="login-button">Sign In</button></Link>
+            <Link href="/sign-up"><button className="get-started-button">Get Started</button></Link>
           </div>
         </div>
       </nav>
