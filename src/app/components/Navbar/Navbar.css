@@ -18,9 +18,22 @@ body {
   font-family: Titilium Web;
 }
 
+.homepage-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(245, 247, 250, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(11, 28, 45, 0.08);
+  padding: 20px 0;
+}
+
 .homepage-header .navbar-container {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0 auto;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -149,7 +162,8 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: rgba(11, 28, 45, 0.98); /* Deep navy glass */
+    background: rgba(11, 28, 45, 0.98);
+    /* Deep navy glass */
     backdrop-filter: blur(12px);
     transform: translateX(100%);
     transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -202,7 +216,7 @@ body {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
-  
+
   .mobile-action-containers button:first-child:hover {
     border-color: white;
     background: rgba(255, 255, 255, 0.1);

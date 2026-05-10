@@ -42,6 +42,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .assistant-btn {
   position: fixed;
   display: flex;
@@ -55,34 +56,41 @@ body {
   padding: 15px 20px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 14px;  
+  font-size: 14px;
 }
+
 .assistant-btn .chatbot {
   color: var(--accent-soft-blue);
 }
+
 .hero-section {
   text-align: center;
   width: 60%;
   margin: 5% auto;
+  padding-top: 90px;
   background-color: var(--background-color);
 }
+
 .hero-section h1 {
   font-size: 60px;
   text-align: center;
   color: var(--primary-color);
   margin-bottom: 20px;
 }
-.hero-section p { 
+
+.hero-section p {
   font-size: 18px;
   padding: 1rem 0;
   color: var(--secondary-color);
   margin-bottom: 40px;
 }
+
 .hero-section .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
+
 .cta-buttons button {
   background: var(--primary-color);
   color: white;
@@ -114,12 +122,14 @@ body {
   box-shadow: 0 6px 16px rgba(11, 28, 45, 0.1);
   color: var(--primary-color);
 }
+
 .hero-section .featured-container {
   margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
+
 .featured-container .featured-item {
   display: flex;
   align-items: center;
@@ -129,17 +139,17 @@ body {
 .featured-item i {
   font-size: 18px;
   color: var(--accent-color);
-  transition: 0.3s ease;  
-} 
+  transition: 0.3s ease;
+}
 
 .featured-item span {
   font-size: 14px;
-  color: var(--secondary-color);  
+  color: var(--secondary-color);
 }
 
 .featured-item:hover i {
   transform: scale(1.2);
-} 
+}
 
 .features-container {
   width: 90%;
@@ -148,11 +158,13 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
+
 .features-heading {
   font-size: 32px;
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+
 .features-container p {
   padding: 0px 20px 0px 20px;
   font-size: 18px;
@@ -165,6 +177,7 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .features-item-container {
   display: flex;
   width: 100%;
@@ -206,7 +219,7 @@ body {
   border-radius: 10px;
 }
 
-.features-item-container .feature-item:hover i{
+.features-item-container .feature-item:hover i {
   color: var(--foreground);
   background-color: var(--accent-color);
 }
@@ -230,17 +243,20 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
+
 .working-container .working-heading {
   font-size: 32px;
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+
 .working-container p {
   padding: 0px 20px 0px 20px;
   font-size: 18px;
   color: var(--secondary-color);
   margin-bottom: 30px;
 }
+
 .working-container .working-steps-container {
   display: flex;
   width: 100%;
@@ -249,6 +265,7 @@ body {
   align-items: center;
   gap: 50px;
 }
+
 .working-steps-container .working-step {
   justify-content: center;
   flex-direction: column;
@@ -259,12 +276,14 @@ body {
   text-align: center;
   transition: 0.3s ease;
 }
+
 .working-step .step-icon-container {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 20px;
 }
+
 .step-icon-container i {
   font-size: 24px;
   padding: 15px;
@@ -273,16 +292,19 @@ body {
   transition: 0.5s ease-in-out;
   border-radius: 10px;
 }
+
 .working-step span {
   font-size: 14px;
   color: var(--accent-color);
   font-weight: bolder;
 }
+
 .working-step h3 {
   font-size: 20px;
   padding-top: 20px;
   color: var(--primary-color);
 }
+
 .working-step p {
   font-size: 16px;
   padding: 20px;
@@ -295,11 +317,12 @@ body {
   display: flex;
   background-color: var(--background-color);
   padding: 40px 20px;
-  text-align: center; 
+  text-align: center;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
+
 .developer-documetation-container .snippet-container {
   display: flex;
   flex-direction: column;
@@ -309,6 +332,7 @@ body {
   background-color: var(--primary-color);
   border-radius: 8px;
 }
+
 .snippet-container .snippet-header {
   display: flex;
   width: 100%;
@@ -317,12 +341,14 @@ body {
   border-top-right-radius: 10px;
   color: var(--foreground);
 }
+
 .snippet-container span {
   padding: 10px;
   font-size: 14px;
   color: var(--foreground);
   font-weight: bolder;
 }
+
 .snippet-header .action-container {
   padding: 10px;
   display: flex;
@@ -330,29 +356,34 @@ body {
   align-items: center;
   gap: 5px;
 }
+
 .action-container .actions-red {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: red;
 }
+
 .action-container .actions-yellow {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: yellow;
 }
+
 .action-container .actions-green {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: green;
 }
+
 .snippet-container .snippet-content {
   width: 100%;
   padding: 20px;
   text-align: left;
 }
+
 .snippet-content code {
   color: var(--foreground);
   padding: 10px;
@@ -370,19 +401,23 @@ body {
   gap: 20px;
   text-align: left;
 }
+
 .documentation-container h2 {
   color: var(--primary-color);
   text-align: left;
 }
+
 .documentation-container p {
   color: var(--secondary-color);
 }
+
 .documentation-container ul li {
   color: var(--primary-color);
   padding: 10px 0px 10px 0px;
   font-weight: bolder;
   list-style-type: none;
 }
+
 .documentation-container ul li i {
   color: var(--accent-color);
   padding-right: 10px;
@@ -391,11 +426,13 @@ body {
   padding: 5px;
   border-radius: 50%;
 }
+
 .documentation-container ul p {
   color: var(--secondary-color);
   padding: 0px 0px 0px 30px;
   margin: 0px;
 }
+
 .documentation-container button {
   background: var(--primary-color);
   color: white;
@@ -408,11 +445,13 @@ body {
   font-weight: 600;
   transition: all 0.2s ease;
 }
+
 .documentation-container button:hover {
   background: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(79, 163, 165, 0.3);
 }
+
 .security-features-container {
   background-color: var(--primary-color);
   color: var(--foreground);
@@ -420,13 +459,16 @@ body {
   text-align: center;
   padding: 20px 0px 20px 0px;
 }
+
 .security-features-container h2 {
-  font-size: 22px;
+  font-size: 36px;
   padding-top: 25px;
 }
+
 .security-features-container p {
   padding-top: 10px;
 }
+
 .security-features-card-container {
   display: flex;
   width: 90%;
@@ -436,6 +478,7 @@ body {
   gap: 20px;
   padding: 3% 0px 3% 0px;
 }
+
 .security-features-card-container .security-feature-card {
   background-color: var(--payne-grey-color);
   text-align: left;
@@ -443,9 +486,11 @@ body {
   border-radius: 8px;
   border: 1px solid var(--payne-grey-color);
 }
+
 .security-feature-card:hover {
   border: 1px solid var(--finishing-color);
 }
+
 .security-feature-card i {
   color: var(--finishing-color);
   padding: 5px;
@@ -453,16 +498,21 @@ body {
   font-size: 24px;
   border-radius: 8px;
 }
+
 .security-feature-card h3 {
   padding-top: 15px;
 }
+
 .get-started-container {
   text-align: center;
   color: var(--primary-color);
   padding: 5% 0px 3% 0px;
 }
+
 .get-started-container h2 {
   padding-top: 20px;
+  font-size: 36px;
+  padding-bottom: 20px;
 }
 
 .get-started-actions {
@@ -544,6 +594,7 @@ body {
   border-radius: 50%;
   font-size: 14px;
 }
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -555,42 +606,52 @@ body {
     width: 90%;
     margin: 10% auto;
   }
+
   .cta-buttons {
     flex-direction: column;
     gap: 10px;
   }
+
   .featured-container {
     flex-direction: column;
     gap: 20px;
     align-items: center;
   }
+
   .hero-section h1 {
     font-size: 47px;
   }
+
   .hero-section p {
     font-size: 14px;
   }
+
   .developer-documetation-container {
     flex-direction: column;
     gap: 20px;
   }
+
   .developer-documetation-container .snippet-container {
     width: 100%;
     overflow-x: scroll;
   }
+
   .documentation-container {
-    width: 100%;  
-}
-.security-features-container h2 {
-  padding: 0px 10px 0px 10px;
-}
-.security-features-card-container {
-  flex-direction: column;
-}
-.security-feature-card {
-  width: 90%;
-  margin: auto;
-}
+    width: 100%;
+  }
+
+  .security-features-container h2 {
+    padding: 0px 10px 0px 10px;
+  }
+
+  .security-features-card-container {
+    flex-direction: column;
+  }
+
+  .security-feature-card {
+    width: 90%;
+    margin: auto;
+  }
 
 }
 
@@ -758,6 +819,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

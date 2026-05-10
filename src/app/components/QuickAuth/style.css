@@ -7,65 +7,94 @@
   --finishing-color: #32de84;
   --cards-bg-color: #ffffff;
 }
+
 @font-face {
   font-family: Titilium Web;
   src: url("../../assets/fonts/GoogleSans-Regular.ttf") format("truetype");
 }
+
 html, body {
-  overflow-x: scroll;
+  overflow-x: hidden;
   font-family: Titilium Web;
 }
+
 .authorize-main-container {
     background-color: var(--background-color);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
+
 .authorize-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(11, 28, 45, 0.08), 0 1px 3px rgba(11, 28, 45, 0.04);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
 }
-.authorize-container i {
-    font-size: 2rem;
-    color: var(--background-color);
-    margin-bottom: 1rem;
-    background-image: linear-gradient(to right, var(--accent-color) 0%, #00f2fe 100%);
-    padding: 20px;
-    border-radius: 8px;
-}
+
 .authorize-container h2 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-size: 24px;
+    font-weight: 700;
 }
+
 .authorize-container p {
     color: var(--secondary-color);
     margin: 0;
+    font-size: 15px;
 }
+
 .authorize-container img {
-    margin-bottom: 1rem;
+    margin-bottom: 24px;
 }
+
 .authrex-account-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 12px;
+    margin-top: 32px;
+    width: 100%;
 }
+
 .authrex-account-container .authrex-account-data {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: var(--cards-bg-color);
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid rgba(11, 28, 45, 0.1);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.2s ease;
+    text-align: left;
 }
+
+.authrex-account-container .authrex-account-data:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(79, 163, 165, 0.15);
+    transform: translateY(-1px);
+}
+
 .authrex-account-container .authrex-account-data .user-icon {
     border-radius: 50%;
     margin: 0;
+    background: rgba(79, 163, 165, 0.1);
+    color: var(--accent-color);
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .authrex-account-container .authrex-account-info {
@@ -73,16 +102,49 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex: 1;
 }
+
 .authrex-account-container .authrex-account-info h3 {
     color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 2px 0;
 }
+
 .authrex-account-container .authrex-account-info p {
     color: var(--secondary-color);
-}
-.authrex-account-container .icon {
-    float: right;
-    background: transparent;
-    color: var(--secondary-color);
+    font-size: 13px;
     margin: 0;
+}
+
+.authrex-account-container .icon {
+    color: rgba(11, 28, 45, 0.3);
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.authrex-account-container .authrex-account-data:hover .icon {
+    color: var(--accent-color);
+}
+
+.authrex-account-actions {
+    margin-top: 10px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.authrex-account-actions:hover {
+    background: rgba(11, 28, 45, 0.05);
+    color: var(--primary-color);
 }

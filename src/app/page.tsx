@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import Chatbot from "./components/Chatbot/Chatbot";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
 
@@ -230,6 +231,7 @@ if (result.decision === 'allow') {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
