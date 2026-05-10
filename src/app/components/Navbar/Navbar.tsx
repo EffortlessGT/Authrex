@@ -22,7 +22,7 @@ const Navbar = () => {
               height={50}
             />
           </div>
-          <div className="hamburger-container" onClick={toggleMenu}>
+          <div className={`hamburger-container ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
             <div className="hamburger-line"></div>
             <div className="hamburger-line"></div>
             <div className="hamburger-line"></div>
@@ -39,7 +39,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#github" onClick={toggleMenu}>
+              <Link href="developers-docs" onClick={toggleMenu}>
                 Developers
               </Link>
             </li>
@@ -54,12 +54,16 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#github" onClick={toggleMenu}>
+              <Link href="/docs" onClick={toggleMenu}>
                 Docs
               </Link>
             </li>
-          </ul> 
-          <div className="action-containers">
+            <div className="mobile-action-containers">
+              <button className="login-button">Sign In</button>
+              <button className="get-started-button">Get Started</button>
+            </div>
+          </ul>
+          <div className="action-containers desktop-actions">
             <button className="login-button">Sign In</button>
             <button className="get-started-button">Get Started</button>
           </div>

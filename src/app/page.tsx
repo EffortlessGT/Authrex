@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
+import Chatbot from "./components/Chatbot/Chatbot";
 import Link from "next/link";
 import { features } from "process";
 
@@ -31,7 +32,7 @@ export default function Home() {
       icon: "fa-solid fa-key",
       title: "Advanced Session & Token Control",
       description: "Granular control over session management and token lifecycle"
-    }, 
+    },
     {
       icon: "fa-solid fa-sheet-plastic",
       title: "Security Audit Logs & Events",
@@ -43,118 +44,115 @@ export default function Home() {
       icon: "fa-solid fa-shield-halved",
       title: "Zero Trust Friendly",
       description: "Built on zero trust principles with continuous verification"
-    }, 
+    },
     {
       icon: "fa-solid fa-shield-halved",
-      title: "Policy-Based Decisions", 
+      title: "Policy-Based Decisions",
       description: "Flexible policy engine for granular access control"
     },
     {
       icon: "fa-solid fa-shield-halved",
-      title: "Continuous Verification", 
+      title: "Continuous Verification",
       description: "Real-time risk assessment throughout user sessions"
     },
     {
       icon: "fa-solid fa-shield-halved",
-      title: "Enterprise-Grade Logging", 
+      title: "Enterprise-Grade Logging",
       description: "Comprehensive audit trails for compliance and security"
     }
 
   ];
   return (
     <>
-    <Navbar /> 
-    
-    <section className="hero-section">
-      <div className="hero-content">
-        <h1>Adaptive Authentication Infrastructure for Modern Applications</h1>
-        <p>Design, control, and scale secure authentication workflows without locking your UI or logic.</p>
-        
-      </div>
-      <div className="cta-buttons">
+      <Navbar />
+
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1>Adaptive Authentication Infrastructure for Modern Applications</h1>
+          <p>Design, control, and scale secure authentication workflows without locking your UI or logic.</p>
+
+        </div>
+        <div className="cta-buttons">
           <button className="start-free-button">Start Free</button>
           <button className="view-docs-button">View Docs</button>
         </div>
-       <div className="featured-container">
-        <div className="featured-item">
-        <i className="fa-solid fa-shield-halved"></i>
-        <span>Enterprise Grade Security</span>
-        </div>
-        <div className="featured-item">
-        <i className="fa-solid fa-code"></i>
-        <span>Developer Friendly</span>
-        </div>
-        <div className="featured-item">
-        <i className="fa-regular fa-clock"></i>
-        <span>Fast & Scalable</span>
-        </div>
-        </div> 
-    </section>
-    <main>
-      <div className="assistant-btn">
-        <i className="fa-solid fa-headset chatbot"></i>
-      <span>Talk With Us!</span>
-      </div>
-      <div className="features-container">
-        <h2 className="features-heading">Enterprise-Grade Authentication Features</h2>
-        <p>Everything you need to build secure, scalable authentication systems</p>
-        <div className="features-item-container">
-          { featuresData.map((feature, index) => (
-          <div className="feature-item" key={index}>
-            <div className="feature-icon-container">
-              <i className={feature.icon}></i>
-            </div>
-            <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
+        <div className="featured-container">
+          <div className="featured-item">
+            <i className="fa-solid fa-shield-halved"></i>
+            <span>Enterprise Grade Security</span>
           </div>
-          ))}
-        </div>
-      </div>
-      <div className="working-container">
-        <h2 className="working-heading">How AUTHREX Works</h2>
-        <p>Three simple steps to implement adaptive authentication</p>
-        <div className="working-steps-container">
-          <div className="working-step">
-            <div className="step-icon-container">
-              <i className="fa-solid fa-gear"></i>
-            </div>
-            <span>STEP 1</span>
-            <h3>1. Define Policies</h3>
-            <p>Configure authentication rules, risk thresholds, and access policies through our intuitive dashboard or API.</p>
+          <div className="featured-item">
+            <i className="fa-solid fa-code"></i>
+            <span>Developer Friendly</span>
           </div>
-          <div className="working-step">
-            <div className="step-icon-container">
-              <i className="fa-solid fa-code"></i>
-            </div>
-            <span>STEP 2</span> 
-            <h3>2. Authenticate via APIs</h3>
-            <p>Integrate our authentication APIs into your application with minimal code using our SDKs.</p>
-          </div>
-          <div className="working-step">
-            <div className="step-icon-container">
-              <i className="fa-solid fa-shield-halved"></i>
-            </div>
-            <span>STEP 3</span>
-            <h3>3. Adaptive Access Decisions</h3>
-            <p>AUTHREX evaluates context and risk in real-time to make intelligent access control decisions.</p>
+          <div className="featured-item">
+            <i className="fa-regular fa-clock"></i>
+            <span>Fast & Scalable</span>
           </div>
         </div>
-      </div>
-      <div className="developer-documetation-container">
-        <div className="snippet-container">
-          <div className="snippet-header">
-            <div className="action-container">
-              <div className="actions-red"></div>
-              <div className="actions-yellow"></div>
-              <div className="actions-green"></div>
-            </div>
-            <span>API Call</span>
+      </section>
+      <main>
+        <Chatbot />
+        <div className="features-container">
+          <h2 className="features-heading">Enterprise-Grade Authentication Features</h2>
+          <p>Everything you need to build secure, scalable authentication systems</p>
+          <div className="features-item-container">
+            {featuresData.map((feature, index) => (
+              <div className="feature-item" key={index}>
+                <div className="feature-icon-container">
+                  <i className={feature.icon}></i>
+                </div>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </div>
+            ))}
           </div>
-          <div className="snippet-content">
-            <pre>
-              <code>
-                {
-                  `// Initialize AUTHREX SDK
+        </div>
+        <div className="working-container">
+          <h2 className="working-heading">How AUTHREX Works</h2>
+          <p>Three simple steps to implement adaptive authentication</p>
+          <div className="working-steps-container">
+            <div className="working-step">
+              <div className="step-icon-container">
+                <i className="fa-solid fa-gear"></i>
+              </div>
+              <span>STEP 1</span>
+              <h3>1. Define Policies</h3>
+              <p>Configure authentication rules, risk thresholds, and access policies through our intuitive dashboard or API.</p>
+            </div>
+            <div className="working-step">
+              <div className="step-icon-container">
+                <i className="fa-solid fa-code"></i>
+              </div>
+              <span>STEP 2</span>
+              <h3>2. Authenticate via APIs</h3>
+              <p>Integrate our authentication APIs into your application with minimal code using our SDKs.</p>
+            </div>
+            <div className="working-step">
+              <div className="step-icon-container">
+                <i className="fa-solid fa-shield-halved"></i>
+              </div>
+              <span>STEP 3</span>
+              <h3>3. Adaptive Access Decisions</h3>
+              <p>AUTHREX evaluates context and risk in real-time to make intelligent access control decisions.</p>
+            </div>
+          </div>
+        </div>
+        <div className="developer-documetation-container">
+          <div className="snippet-container">
+            <div className="snippet-header">
+              <div className="action-container">
+                <div className="actions-red"></div>
+                <div className="actions-yellow"></div>
+                <div className="actions-green"></div>
+              </div>
+              <span>API Call</span>
+            </div>
+            <div className="snippet-content">
+              <pre>
+                <code>
+                  {
+                    `// Initialize AUTHREX SDK
 import { AuthRex } from '@authrex/sdk';
 
 const auth = new AuthRex({
@@ -183,44 +181,59 @@ if (result.decision === 'allow') {
     challengeId: result.challengeId 
   });
 }`
-                }
-              </code>
-            </pre>
+                  }
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div className="documentation-container" id="#developers-docs">
+            <h2>Built for Developers</h2>
+            <p>AUTHREX provides clean, intuitive APIs and comprehensive SDKs that make integration seamless. Focus on building your application while we handle the complexity of authentication.</p>
+            <ul>
+              <li><i className="fa-solid fa-check"></i>Comprehensive SDKs</li>
+              <p>Available for Node.js, Python, Go, Java, and more</p>
+              <li><i className="fa-solid fa-check"></i>Clean REST APIs</li>
+              <p>Well-documented, predictable, and easy to use</p>
+              <li><i className="fa-solid fa-check"></i>Language Agnostic</li>
+              <p>Integrate with any tech stack or framework</p>
+              <li><i className="fa-solid fa-check"></i>Easy Integration</li>
+              <p>Get started in minutes with our quick-start guides</p>
+            </ul>
+            <button>Read Documentation</button>
           </div>
         </div>
-        <div className="documentation-container">
-          <h2>Built for Developers</h2>
-          <p>AUTHREX provides clean, intuitive APIs and comprehensive SDKs that make integration seamless. Focus on building your application while we handle the complexity of authentication.</p>
-          <ul>
-            <li><i className="fa-solid fa-check"></i>Comprehensive SDKs</li>
-            <p>Available for Node.js, Python, Go, Java, and more</p>
-            <li><i className="fa-solid fa-check"></i>Clean REST APIs</li>
-            <p>Well-documented, predictable, and easy to use</p>
-            <li><i className="fa-solid fa-check"></i>Language Agnostic</li>
-            <p>Integrate with any tech stack or framework</p>
-            <li><i className="fa-solid fa-check"></i>Easy Integration</li>
-            <p>Get started in minutes with our quick-start guides</p>
-          </ul>
-          <button>Read Documentation</button>
-        </div>
-      </div>
-      <div className="security-features-container">
-        <h2>Security & Compliance First</h2>
+        <div className="security-features-container">
+          <h2>Security & Compliance First</h2>
           <p>Enterprise-grade security infrastructure built for the most demanding requirements</p>
-      <div className="security-features-card-container">
-        {securityFeatureData.map((feature, i) => (
-        <div className="security-feature-card" key={i}>
-           <i className={feature.icon}></i>
-           <h3>{feature.title}</h3>
-           <p>{feature.description}</p>
+          <div className="security-features-card-container">
+            {securityFeatureData.map((feature, i) => (
+              <div className="security-feature-card" key={i}>
+                <i className={feature.icon}></i>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-  ))}
-      </div>
-      </div>
-      <div className="get-started-container">
-        <h2>Authentication should adapt to risk — not slow users down.</h2>
-      </div>
-    </main>
+        <div className="get-started-container">
+          <h2>Authentication should adapt to risk — not slow users down.</h2>
+          <p>Join forward-thinking teams building secure, adaptive authentication systems with AUTHREX.</p>
+          <div className="get-started-actions">
+            <button className="get-started-button">Get Started</button>
+            <button className="get-started-button">Book Demo</button>
+          </div>
+          <div className="get-started-features">
+            <p>Free Trial Version - V1</p>
+            <div className="get-started-feature-items">
+              <ul>
+                <li><i className="fa-solid fa-check"></i>Free Trial Access Version</li>
+                <li><i className="fa-solid fa-check"></i>Cancel Anytime</li>
+                <li><i className="fa-solid fa-check"></i>No Credit Card Required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
