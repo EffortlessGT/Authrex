@@ -1,8 +1,14 @@
-import Link from 'next/link';
-import './Footer.css';
-import Image from 'next/image';
+"use client";
+
+import React, { useState } from "react";
+import "./Footer.css";
+import Link from "next/link";
+import Image from "next/image";
+import PrivacyModal from "../Modals/PrivacyModal";
 
 export default function Footer() {
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
@@ -16,8 +22,8 @@ export default function Footer() {
             <h4>Product</h4>
             <ul>
               <li><Link href="#features">Features</Link></li>
-              <li><Link href="#pricing">Pricing</Link></li>
-              <li><Link href="#security">Security</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
+              <li><Link href="/security">Security</Link></li>
               <li><Link href="#enterprise">Enterprise</Link></li>
             </ul>
           </div>
@@ -45,19 +51,21 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Legal</h4>
             <ul>
-              <li><Link href="#privacy">Privacy Policy</Link></li>
+              <li><button onClick={() => setIsPrivacyOpen(true)} className="footer-modal-btn">Privacy Policy</button></li>
               <li><Link href="#terms">Terms of Service</Link></li>
               <li><Link href="#compliance">Compliance</Link></li>
-              <li><Link href="#security-legal">Security</Link></li>
+              <li><Link href="/security">Security</Link></li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 AUTHREX. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} AUTHREX. All rights reserved.</p>
         <p className="powered-by">Engineered with passion by <strong>GT</strong></p>
       </div>
+
+      <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </footer>
   );
 }

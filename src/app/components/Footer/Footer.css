@@ -57,14 +57,21 @@
   margin-bottom: 12px;
 }
 
-.footer-column ul li a {
+.footer-column ul li a, .footer-modal-btn {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-size: 14px;
   transition: all 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-block;
+  text-align: left;
 }
 
-.footer-column ul li a:hover {
+.footer-column ul li a:hover, .footer-modal-btn:hover {
   color: var(--accent-color);
   padding-left: 4px;
 }

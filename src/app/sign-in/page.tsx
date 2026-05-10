@@ -1,14 +1,40 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../auth.css";
 
-export const metadata: Metadata = {
-  title: "Sign In - Authrex",
-  description: "Sign in to your Authrex account",
-};
-
 export default function SignInPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+
+  const validate = () => {
+    const newErrors: { email?: string; password?: string } = {};
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!password) {
+      newErrors.password = "Password is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validate()) {
+      // Proceed with authentication
+      console.log("Form submitted", { email, password });
+    }
+  };
+
   return (
     <div className="auth-page-container">
       {/* Left Panel */}
@@ -24,18 +50,9 @@ export default function SignInPage() {
             Enterprise-grade identity orchestration platform trusted by security-conscious development teams worldwide.
           </p>
           <ul className="auth-features">
-            <li>
-              <i className="fa-solid fa-check"></i>
-              Zero-trust architecture
-            </li>
-            <li>
-              <i className="fa-solid fa-check"></i>
-              SOC 2 Type II compliant
-            </li>
-            <li>
-              <i className="fa-solid fa-check"></i>
-              End-to-end encryption
-            </li>
+            <li><i className="fa-solid fa-check"></i> Zero-trust architecture</li>
+            <li><i className="fa-solid fa-check"></i> SOC 2 Type II compliant</li>
+            <li><i className="fa-solid fa-check"></i> End-to-end encryption</li>
           </ul>
         </div>
       </div>
@@ -48,18 +65,40 @@ export default function SignInPage() {
             <p>Sign in to your Authrex account</p>
           </div>
 
-          <form className="auth-form">
+          <form className="auth-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">
               <label htmlFor="email">Work email</label>
-              <input type="email" id="email" placeholder="you@company.com" required />
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="you@company.com" 
+                value={email}
+                onChange={(e) => { setEmail(e.target.value); setErrors({...errors, email: ""}); }}
+                className={errors.email ? "error-input" : ""}
+              />
+              {errors.email && <span className="error-text">{errors.email}</span>}
             </div>
 
             <div className="form-group">
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" placeholder="Enter your password" required />
+              <div className="password-input-container">
+                <input 
+                  type={showPassword ? "text" : "password"} 
+                  id="password" 
+                  placeholder="Enter your password" 
+                  value={password}
+                  onChange={(e) => { setPassword(e.target.value); setErrors({...errors, password: ""}); }}
+                  className={errors.password ? "error-input" : ""}
+                />
+                <i 
+                  className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"} password-toggle-icon`}
+                  onClick={() => setShowPassword(!showPassword)}
+                ></i>
+              </div>
+              {errors.password && <span className="error-text">{errors.password}</span>}
             </div>
 
-            <button type="button" className="auth-submit-btn">Sign in</button>
+            <button type="submit" className="auth-submit-btn">Sign in</button>
           </form>
 
           <div className="auth-footer">
@@ -73,7 +112,7 @@ export default function SignInPage() {
             </div>
 
             <div className="auth-switch">
-              Don't have an account? <Link href="/sign-up">Create account</Link>
+              Don&apos;t have an account? <Link href="/sign-up">Create account</Link>
             </div>
           </div>
         </div>

@@ -34,8 +34,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#docs" onClick={toggleMenu}>
-                Features
+              <Link href="/pricing" onClick={toggleMenu}>
+                Pricing
               </Link>
             </li>
             <li>
@@ -44,13 +44,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="#github" onClick={toggleMenu}>
+              <Link href="/security" onClick={toggleMenu}>
                 Security
-              </Link>
-            </li>
-            <li>
-              <Link href="#github" onClick={toggleMenu}>
-                Pricing
               </Link>
             </li>
             <li>

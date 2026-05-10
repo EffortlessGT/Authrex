@@ -36,8 +36,14 @@ html, body {
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(11, 28, 45, 0.08), 0 1px 3px rgba(11, 28, 45, 0.04);
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
     text-align: center;
+}
+
+.authorize-logo {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
 }
 
 .authorize-container h2 {
@@ -47,14 +53,10 @@ html, body {
     font-weight: 700;
 }
 
-.authorize-container p {
+.authorize-container .subtitle {
     color: var(--secondary-color);
     margin: 0;
     font-size: 15px;
-}
-
-.authorize-container img {
-    margin-bottom: 24px;
 }
 
 .authrex-account-container {
@@ -80,21 +82,23 @@ html, body {
 
 .authrex-account-container .authrex-account-data:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(79, 163, 165, 0.15);
+    background-color: rgba(79, 163, 165, 0.02);
+    box-shadow: 0 4px 12px rgba(79, 163, 165, 0.1);
     transform: translateY(-1px);
 }
 
-.authrex-account-container .authrex-account-data .user-icon {
+.account-initials {
     border-radius: 50%;
-    margin: 0;
-    background: rgba(79, 163, 165, 0.1);
-    color: var(--accent-color);
+    background: var(--accent-color);
+    color: white;
     width: 44px;
     height: 44px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .authrex-account-container .authrex-account-info {
@@ -119,32 +123,63 @@ html, body {
 }
 
 .authrex-account-container .icon {
-    color: rgba(11, 28, 45, 0.3);
+    color: rgba(11, 28, 45, 0.2);
     font-size: 14px;
+}
+
+.use-another-account {
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.use-another-account a {
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.authrex-account-container .authrex-account-data:hover .icon {
-    color: var(--accent-color);
-}
-
-.authrex-account-actions {
-    margin-top: 10px;
-    color: var(--secondary-color);
-    cursor: pointer;
-    padding: 8px;
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.authrex-account-actions:hover {
-    background: rgba(11, 28, 45, 0.05);
+.use-another-account a:hover {
     color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.authorize-footer {
+    margin-top: 40px;
+    width: 100%;
+    border-top: 1px solid rgba(11, 28, 45, 0.06);
+    padding-top: 24px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.footer-links a, .footer-link-btn {
+    color: var(--secondary-color);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.footer-links a:hover, .footer-link-btn:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.copyright {
+    color: rgba(11, 28, 45, 0.4);
+    font-size: 11px;
+    font-weight: 500;
 }
