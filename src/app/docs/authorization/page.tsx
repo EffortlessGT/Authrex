@@ -19,7 +19,7 @@ export default function AuthorizationPage() {
       </p>
       <ul>
         <li><strong>RBAC:</strong> Assign users to roles (e.g., <code>admin</code>, <code>editor</code>) and check their permissions.</li>
-        <li><strong>ABAC:</strong> Evaluate dynamic attributes (e.g., "User can edit document IF document.ownerId === user.id").</li>
+        <li><strong>ABAC:</strong> Evaluate dynamic attributes (e.g., &quot;User can edit document IF document.ownerId === user.id&quot;).</li>
       </ul>
 
       <h2>Enforcing Policies</h2>

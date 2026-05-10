@@ -15,7 +15,7 @@ export default function AuthenticationPage() {
 
       <h2>Supported Methods</h2>
       <ul>
-        <li><strong>Magic Links:</strong> Send a secure, one-time login link to a user's email.</li>
+        <li><strong>Magic Links:</strong> Send a secure, one-time login link to a user&apos;s email.</li>
         <li><strong>OTP via SMS/Email:</strong> Send a 6-digit code for verification.</li>
         <li><strong>WebAuthn / Biometrics:</strong> Use device-level biometrics (FaceID, TouchID) for secure, passwordless logins.</li>
         <li><strong>OAuth 2.0 / OIDC:</strong> Connect with providers like Google, GitHub, and Microsoft.</li>

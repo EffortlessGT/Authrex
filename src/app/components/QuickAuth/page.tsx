@@ -1,6 +1,5 @@
 import "./style.css";
 import Image from "next/image";
-import favicon from "../../assets/img/favicon.svg";
 
 const authorize = () => {
     return (

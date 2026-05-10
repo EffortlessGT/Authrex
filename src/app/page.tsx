@@ -1,9 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Chatbot from "./components/Chatbot/Chatbot";
-import Link from "next/link";
-import { features } from "process";
 
 export default function Home() {
 

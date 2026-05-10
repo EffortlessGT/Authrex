@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 function AuthRexLogin() {
     const width = 500;
     const height = 600;
