@@ -67,6 +67,7 @@ body {
   text-align: center;
   width: 60%;
   margin: 5% auto;
+  height: 75vh;
   padding-top: 90px;
   background-color: var(--background-color);
 }

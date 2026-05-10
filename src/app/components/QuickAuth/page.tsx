@@ -4,10 +4,16 @@ import { useState } from "react";
 import "./style.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import PrivacyModal from "../Modals/PrivacyModal";
 
 const Authorize = () => {
     const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+    const router = useRouter();
+
+    const handleAccountSelect = () => {
+        router.push('/components/QuickAuth/authorize');
+    };
 
     return (
         <section className="authorize-section">
@@ -18,9 +24,9 @@ const Authorize = () => {
                     </div>
                     <h2>Choose an AUTHREX account</h2>
                     <p className="subtitle">Continue to DevForum</p>
-                    
+
                     <div className="authrex-account-container">
-                        <div className="authrex-account-data">
+                        <div className="authrex-account-data" onClick={handleAccountSelect}>
                             <div className="account-initials">GT</div>
                             <div className="authrex-account-info">
                                 <h3>Ganesh Telore</h3>
@@ -28,8 +34,8 @@ const Authorize = () => {
                             </div>
                             <i className="fa-solid fa-angle-right icon"></i>
                         </div>
-                        
-                        <div className="authrex-account-data">
+
+                        <div className="authrex-account-data" onClick={handleAccountSelect}>
                             <div className="account-initials">TD</div>
                             <div className="authrex-account-info">
                                 <h3>Test Developer</h3>
