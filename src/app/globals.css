@@ -9,6 +9,8 @@
   --finishing-color: #32de84;
   --cards-bg-color: #ffffff;
   --payne-grey-color: #0b1125;
+  --foreground: #0b1125;
+  --background: #F5F7FA;
 }
 
 @font-face {
@@ -67,8 +69,9 @@ body {
   text-align: center;
   width: 60%;
   margin: 5% auto;
-  height: 75vh;
-  padding-top: 90px;
+  min-height: 75vh;
+  padding-top: 120px;
+  padding-bottom: 50px;
   background-color: var(--background-color);
 }
 
@@ -192,9 +195,10 @@ body {
   justify-content: left;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 30px 20px;
   width: 350px;
-  height: 250px;
+  max-width: 100%;
+  min-height: 250px;
   text-align: left;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 8px;
@@ -273,7 +277,8 @@ body {
   align-items: center;
   padding: 20px;
   width: 350px;
-  height: 250px;
+  max-width: 100%;
+  min-height: 250px;
   text-align: center;
   transition: 0.3s ease;
 }
@@ -455,10 +460,10 @@ body {
 
 .security-features-container {
   background-color: var(--primary-color);
-  color: var(--foreground);
+  color: #ffffff;
   height: auto;
   text-align: center;
-  padding: 20px 0px 20px 0px;
+  padding: 60px 20px;
 }
 
 .security-features-container h2 {
@@ -494,10 +499,10 @@ body {
 
 .security-feature-card i {
   color: var(--finishing-color);
-  padding: 5px;
-  background-color: #2d5c5f;
+  padding: 12px;
+  background-color: rgba(50, 222, 132, 0.1);
   font-size: 24px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .security-feature-card h3 {
@@ -604,65 +609,85 @@ body {
 
 @media(max-width: 768px) {
   .hero-section {
-    width: 90%;
-    margin: 10% auto;
+    width: 95%;
+    margin: 0 auto;
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
 
   .cta-buttons {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .featured-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
+    margin-top: 30px;
   }
 
   .hero-section h1 {
-    font-size: 47px;
+    font-size: 36px;
+    line-height: 1.2;
   }
 
   .hero-section p {
-    font-size: 14px;
+    font-size: 16px;
+    padding: 0.5rem 0;
   }
 
   .developer-documetation-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
+    padding: 40px 15px;
   }
 
   .developer-documetation-container .snippet-container {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   .documentation-container {
     width: 100%;
+    padding: 0;
   }
 
   .security-features-container h2 {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px;
+    font-size: 28px;
   }
 
   .security-features-card-container {
     flex-direction: column;
+    width: 100%;
+    gap: 15px;
   }
 
   .security-feature-card {
-    width: 90%;
-    margin: auto;
+    width: 100%;
   }
 
+  .assistant-btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
 }
 
 /* Chatbot UI Styles */
 .chatbot-window {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   width: 350px;
+  max-width: calc(100vw - 40px);
   height: 500px;
+  max-height: 70vh;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);

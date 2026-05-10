@@ -1,7 +1,7 @@
 .docs-container {
   display: flex;
   min-height: 100vh;
-  padding-top: 110px;
+  padding-top: 130px;
 }
 
 .docs-sidebar {
@@ -162,9 +162,9 @@
 @media (max-width: 768px) {
   .docs-container {
     flex-direction: column;
-    padding: 20px;
+    padding: 110px 20px 20px;
   }
-  
+
   .docs-mobile-toggle {
     display: flex;
     justify-content: space-between;
